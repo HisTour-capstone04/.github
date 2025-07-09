@@ -72,32 +72,47 @@
 - 출발지, 목적지와 최대 5개의 경유지를 설정할 수 있습니다.
 - 경로를 설정하여 길찾기 모드에 진입 시 지도 상에 출발지/경유지/목적지 마커와 경로가 표시됩니다.
 - 드래그하여 경로 상 유적지들의 순서를 변경하고, 제거 버튼을 눌러 필요 없는 경유지를 삭제할 수 있습니다.
+<img src="https://github.com/user-attachments/assets/54251b2d-ef11-4557-a3d9-53497d99d5a3" width="300">
+<img src="https://github.com/user-attachments/assets/011dbfd5-edf1-4f0c-86b6-f5243bb9b1c7" width="300">
+
 <br>
 
 ### ⭐ 북마크
 - 북마크한 유적지에 대한 상세 정보(이름, 거리, 상세 주소, 설명, 사진)를 제공합니다.
 - 북마크한 유적지는 지도 상에 별 모양 마커로 항상 표시됩니다.
+<img src="https://github.com/user-attachments/assets/6cedcbe1-2ea8-4f56-8770-8daa74404ebf" width="300">
+
 <br>
 
 ### 👤 마이 페이지
 - 사용자의 위치, 북마크, 날씨 등을 고려한 맞춤형 유적지 추천을 제공합니다.
 - 추천 이유를 함께 제공하여 신뢰도 높은 추천 경험을 제공합니다.
+<img src="https://github.com/user-attachments/assets/2800fa9a-6a61-4d48-89c4-3e28887e3311" width="300">
+
+
 <br>
 
 ### 🔍 검색
 - 원하는 유적지를 검색할 수 있으며, 최근 검색어 15개까지 저장됩니다.
 - 검색 결과는 지도에 바로 표시되고, 슬라이드 패널로 정보를 확인할 수 있습니다.
+<img src="https://github.com/user-attachments/assets/590f7e84-56cd-4559-869f-d6c710edf22d" width="300">
+
 <br>
 
 ### 💬 챗봇
 - 유적지에 대한 궁금증을 챗봇을 통해 바로 해결할 수 있습니다.
 - 답변은 음성(TTS)으로도 들을 수 있으며, 자동 음성 설정이 가능합니다.
 - 꼬리질문 버튼으로 추가 질문, 목적지 설정, 장바구니 추가 기능을 손쉽게 이용할 수 있습니다.
+<img src="https://github.com/user-attachments/assets/a1c3797a-b5f5-488a-ae48-448651cc2e75" width="300">
+<img src="https://github.com/user-attachments/assets/10d0822e-0fac-4b67-9323-d4ce7ca7675c" width="300">
+
 <br>
 
 ### 🔔 푸시 알림
 - 5분마다 사용자의 위치를 기반으로 새로운 유적지 발견 시 푸시 알림을 제공합니다.
 - 가장 가까운 유적지와 새로 발견된 유적지 개수를 한 번에 확인할 수 있습니다.
+<img src="https://github.com/user-attachments/assets/c9dc5452-01de-4012-8e92-aafc9b0e62d2" width="300">
+
 <br>
 
 ## 파일 디렉토리 구조
