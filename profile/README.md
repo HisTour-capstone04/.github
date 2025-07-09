@@ -155,7 +155,7 @@ Histour/
 
 <br>
 - Backend
-'''
+```
 src/
 ├── main/
 │   ├── java/
@@ -223,4 +223,4 @@ src/
 │       └── HisTourApplicationTests.java # 통합 테스트
 └── resources/
 └── application-test.yml   # 테스트 환경 설정 파일
-'''
+```
