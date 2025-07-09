@@ -152,75 +152,81 @@ Histour/
 └── hooks/                    
     └── useDebouncedValue.js  # 디바운싱 용 커스텀 훅
 ```
-
-<br>
 - Backend
 ```
 src/
 ├── main/
 │   ├── java/
 │   │   └── com/capstone/HisTour/
-│   │       ├── domain/                  # 핵심 비즈니스 로직 및 엔티티
-│   │       │   ├── api/                 # 외부 API 연동 또는 공통 API
+│   │       ├── domain/                     # 핵심 비즈니스 로직 및 엔티티
+│   │       │   ├── alarm/                  # 알림 관련 도메인
+│   │       │   │   ├── controller/         # 알림 API 요청 처리
+│   │       │   │   ├── domain/             # 알림 엔티티
+│   │       │   │   ├── dto/                # 알림 데이터 전송 객체
+│   │       │   │   ├── repository/         # 알림 데이터 접근 계층
+│   │       │   │   └── service/            # 알림 비즈니스 로직
+│   │       │   ├── api/                    # 외부 API 연동 또는 공통 API
 │   │       │   │   ├── controller/
 │   │       │   │   └── service/
-│   │       │   ├── apiPayload/          # API 응답 형식 및 예외 처리 관련
-│   │       │   │   ├── code/            # HTTP 응답 코드 및 사용자 정의 에러 코드
-│   │       │   │   ├── exception/       # 사용자 정의 예외
-│   │       │   │   └── status/          # API 응답 상태 정보
-│   │       │   │   └── DefaultResponse.java # 공통 응답 DTO
-│   │       │   ├── bookmark/            # 북마크 관련 도메인
-│   │       │   │   ├── controller/
-│   │       │   │   ├── domain/
-│   │       │   │   ├── dto/
-│   │       │   │   ├── repository/
-│   │       │   │   └── service/
-│   │       │   ├── chatbot/             # 챗봇 관련 도메인
-│   │       │   │   ├── controller/
-│   │       │   │   ├── domain/
-│   │       │   │   ├── dto/
-│   │       │   │   ├── repository/
-│   │       │   │   └── service/
-│   │       │   ├── heritage/            # 유적지 관련 도메인
+│   │       │   ├── apiPayload/             # API 응답 형식 및 예외 처리 관련
+│   │       │   │   ├── code/               # HTTP 응답 코드 및 사용자 정의 에러 코드
+│   │       │   │   ├── exception/          # 사용자 정의 예외
+│   │       │   │   ├── status/             # API 응답 상태 정보
+│   │       │   │   └── DefaultResponse.java# 공통 응답 DTO
+│   │       │   ├── bookmark/               # 북마크 관련 도메인
 │   │       │   │   ├── controller/
 │   │       │   │   ├── domain/
 │   │       │   │   ├── dto/
 │   │       │   │   ├── repository/
 │   │       │   │   └── service/
-│   │       │   ├── member/              # 회원 관련 도메인
+│   │       │   ├── chatbot/                # 챗봇 관련 도메인
 │   │       │   │   ├── controller/
 │   │       │   │   ├── domain/
 │   │       │   │   ├── dto/
 │   │       │   │   ├── repository/
 │   │       │   │   └── service/
-│   │       │   ├── region/              # 지역 관련 도메인
+│   │       │   ├── heritage/               # 유적지 관련 도메인
+│   │       │   │   ├── controller/
+│   │       │   │   ├── domain/
+│   │       │   │   ├── dto/
+│   │       │   │   ├── repository/
+│   │       │   │   └── service/
+│   │       │   ├── member/                 # 회원 관련 도메인
+│   │       │   │   ├── controller/
+│   │       │   │   ├── domain/
+│   │       │   │   ├── dto/
+│   │       │   │   ├── repository/
+│   │       │   │   └── service/
+│   │       │   ├── push_token/             # 푸시 알림 토큰 관리
+│   │       │   ├── refresh_token/          # JWT 리프레시 토큰 관리
+│   │       │   ├── region/                 # 지역 관련 도메인
 │   │       │   │   ├── domain/
 │   │       │   │   ├── dto/
 │   │       │   │   └── service/
-│   │       │   └── visited/             # 방문 기록 관련 도메인
+│   │       │   └── visited/                # 방문 기록 관련 도메인
 │   │       │       ├── controller/
 │   │       │       ├── domain/
 │   │       │       ├── dto/
 │   │       │       ├── repository/
 │   │       │       └── service/
-│   │       ├── global/                  # 전역 설정 및 공통 유틸리티
-│   │       │   ├── annotation/          # 커스텀 어노테이션
-│   │       │   ├── aop/                 # AOP (Aspect-Oriented Programming)
-│   │       │   ├── auth_jwt/            # JWT 인증 관련
-│   │       │   ├── config/              # 전역 설정 및 빈 설정
-│   │       │   ├── error/               # 전역 에러 처리
-│   │       │   └── BaseTimeEntity.java  # 공통 BaseTimeEntity
-│   │       └── HisTourApplication.java  # 메인 애플리케이션 클래스
-│   └── resources/               # 자원 파일
-│       ├── static/              # 정적 웹 리소스 (선택 사항)
-│       ├── templates/           # 템플릿 파일 (선택 사항)
-│       └── application.yml      # Spring Boot 설정 파일
+│   │       ├── global/                     # 전역 설정 및 공통 유틸리티
+│   │       │   ├── annotation/             # 커스텀 어노테이션
+│   │       │   ├── aop/                    # AOP (Aspect-Oriented Programming)
+│   │       │   ├── auth_jwt/               # JWT 인증 관련
+│   │       │   ├── config/                 # 전역 설정 및 빈 설정
+│   │       │   ├── error/                  # 전역 에러 처리
+│   │       │   └── BaseTimeEntity.java     # 공통 BaseTimeEntity
+│   │       └── HisTourApplication.java     # 메인 애플리케이션 클래스
+│   └── resources/                  # 자원 파일
+│       ├── static/                 # 정적 웹 리소스 (선택 사항)
+│       ├── templates/              # 템플릿 파일 (선택 사항)
+│       └── application.yml         # Spring Boot 설정 파일
 └── test/
 ├── java/
 │   └── com/capstone/HisTour/
-│       ├── heritage/            # 유적지 테스트 코드
-│       ├── member/              # 회원 테스트 코드
+│       ├── heritage/             # 유적지 테스트 코드
+│       ├── member/               # 회원 테스트 코드
 │       └── HisTourApplicationTests.java # 통합 테스트
 └── resources/
-└── application-test.yml   # 테스트 환경 설정 파일
+└── application-test.yml    # 테스트 환경 설정 파일
 ```
