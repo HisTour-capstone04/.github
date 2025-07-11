@@ -214,8 +214,6 @@ src/
 │   │       │   │   ├── dto/
 │   │       │   │   ├── repository/
 │   │       │   │   └── service/
-│   │       │   ├── push_token/             # 푸시 알림 토큰 관리
-│   │       │   ├── refresh_token/          # JWT 리프레시 토큰 관리
 │   │       │   ├── region/                 # 지역 관련 도메인
 │   │       │   │   ├── domain/
 │   │       │   │   ├── dto/
